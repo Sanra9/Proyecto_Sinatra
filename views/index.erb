@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h1>Lista de tareas pendientes</h1></div>
+          <div class="panel-body"><h4><em><span class="label label-warning"> Esta es la lista de las tareas pendientes ¡A trabajar!</span></em></h4><br>
+
+          <% @tareas.each do |t| %>
+            <% if t["done"]==false%>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h4 class="list-group-item-heading"><%= t["title"] %></h4>
+                  <div class="text-right">
+                  <form class="" action="/hechas" method="post">
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="id" value="<%=t["id"]%>"></label>
+                      <button type="submit" class="btn btn-success">¡Hecho!</button>
+                    </div>
+
+                    </form>
+                    <form class="" action="/borrar" method="post">
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="id" value="<%=t["id"]%>"></label>
+                        <button type="submit" class="btn btn-danger">¡Borrar!</button>
+                      </div>
+
+                      </form>
+                  </div>
+                </li>
+              </ul>
+            <%end %>
+          <%end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Lista De Tareas</title>
+  </head>
+  <body>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="/">AppTasks</a>
+     <a class="navbar-brand" href="/hechas">Realizadas</a>
+     </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <div class="container-fluid">
+          <a type="button" class="btn btn-primary navbar-btn" role="button" href="/nueva/tarea"><strong>Crear Tarea</strong></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <%= yield %>
+  </body>
+</html>
